@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+	//Funcion para hacer saltos de lineas
+	function saltarLinea(){
+		document.write("<br><br><br><br>")
+	};
+	//Funcion para imprimir frases
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	//Funcion para calcular el IMC
+	function calcularIMC(peso,altura) {
+		imc = Math.round(peso / (altura * altura));
+		return imc;
+	}
+	imprimir("El IMC de Christian es: "+ calcularIMC(71,1.72));
+	//tambien puede ser de esta manera
+	var calculo = calcularIMC(71,1.72);
+	imprimir("El IMC de Christian es: "+ calculo);
+	//o de esta manera;
+	pesoPersona = 71;
+	alturaPersona = 1.72;
+	imc= Math.round(pesoPersona / (alturaPersona * alturaPersona));
+	imprimir("El IMC de Christian es: "+ imc);
+
+	//otra posible solucion es 
+		function calIMC(peso,altura) {
+		imc = Math.round(peso / (altura * altura));
+		imprimir("El IMC de Christian es: "+ imc);
+	}
+	calIMC(71,2.00);
+</script>

@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+	//Funcion para hacer saltos de lineas
+	function saltarLinea(){
+		document.write("<br><br><br><br><br>")
+	};
+	//Funcion para imprimir frases
+	function imprimir(frase){
+		document.write("<big>" + frase + "</big>");
+		saltarLinea();
+	}
+
+	var anho = 2025;
+	
+	var saltolinea = "<br><br><br>"
+	
+	imprimir("Hola Amigos");
+	
+	imprimir("Juan tiene: " + (anho - 2000) + " años");
+
+	imprimir("Pedro tiene: " + (anho - 1995) + " años");
+	
+	var anho = 2030;
+
+
+	document.write("Carlos tiene: " + (anho - 2005) + " años");
+	document.write(saltolinea);
+
+	var anho = 2020;
+
+	document.write("Jimena tiene: " + (anho - 2010) + " años");
+	document.write(saltolinea);
+	document.write("Paola tiene: " + (anho - 1995) + " años");
+	document.write(saltolinea);
+	document.write("Laura tiene: " + (anho - 2005) + " años");
+	document.write(saltolinea);
+	
+	var edadJimena = 10;
+	var edadPaola = 25;
+	var edadLaura = 15;
+	
+	var nombre1= "Jimena";
+	var nombre2= "Paola";
+	var nombre3= "Laura";
+
+	promedio = ((10+25+15)/13)
+	
+	document.write("El promedio de las edades de "+ nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+</script>

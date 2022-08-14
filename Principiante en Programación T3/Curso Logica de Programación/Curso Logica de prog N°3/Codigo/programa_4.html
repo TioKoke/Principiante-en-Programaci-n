@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	var pantalla= document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	function dibujarCircunferencia(x,y,radio){
+		pincel.fillStyle="blue";//define el color
+		pincel.beginPath();//iniciamos el camino para graficar
+		pincel.arc(x,y,radio,0,2*Math.PI);//Crea la circunferencia(x,y,radio,ang.I,Ang.F)
+		pincel.fill();//llena la circunferencia
+	}
+
+	function creeper(x){
+
+		pincel.fillStyle = "darkgreen";
+		pincel.fillRect(0+x,0,87.5,75);
+
+		pincel.fillStyle = "black";
+		pincel.fillRect(12.5+x,12.5,22.5,22.5);
+		pincel.fillRect(52.5+x,12.5,22.5,22.5);
+		pincel.fillRect(35+x,35,17.5,25);
+		pincel.fillRect(52.5+x,47.5,10,27.5);
+		pincel.fillRect(25+x,47.5,10,27.5);
+	}
+
+	dibujarCircunferencia(20,20,10);
+
+	function limpiarPantalla(){
+		pincel.clearRect(0,0,600,400);
+		pincel.fillStyle = "lightgrey";
+		pincel.fillRect(0,0,600,400);
+	}
+	
+	var x = 0;
+	var sentido = 1;
+
+	function actualizarPantalla(){
+		limpiarPantalla();
+
+		if (x > 600){
+			sentido = -1;
+		} else if (x < 0){
+			sentido = 1;
+		}
+
+		//dibujarCircunferencia(x,20,10);
+		creeper(x);
+		x = x +sentido;
+	}
+
+	setInterval(actualizarPantalla,5);
+
+
+</script>

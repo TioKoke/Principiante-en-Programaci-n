@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+
+<script>
+	function saltoLinea() {
+		document.write("<br><br>");
+	}
+	function Imprimir(mensaje) {
+		document.write("Nuestra diferencia de edad es: "+ mensaje);
+		saltoLinea();	
+	}
+	function calculo(Edad1,Edad2) {
+		var diferencia = Edad1 - Edad2;
+		if (diferencia < 0 ) {
+			diferencia = diferencia * -1
+			return(diferencia);
+		}
+		return(diferencia);
+	}
+	Imprimir(calculo(32,10))
+	Imprimir(calculo(2,10))
+</script>

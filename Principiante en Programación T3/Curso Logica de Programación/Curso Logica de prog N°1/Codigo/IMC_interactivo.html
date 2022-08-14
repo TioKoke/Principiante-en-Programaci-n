@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+	//Funcion para hacer saltos de lineas
+	function saltarLinea(){
+		document.write("<br><br><br><br>")
+	};
+	//Funcion para imprimir frases
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	//Funcion para calcular el IMC
+	function calcularIMC(peso,altura) {
+		imc = Math.round(peso / (altura * altura));
+		return imc;
+	}
+	peso= prompt("Ingrese su peso");
+	altura = prompt("Ingrese su altura");
+
+	imcCalculado= calcularIMC(peso,altura)
+	imprimir("El IMC de la persona es: "+ imcCalculado);
+</script>

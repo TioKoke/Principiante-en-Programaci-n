@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	//Obtenemos los datos de nuestro canvas
+	var pantalla= document.querySelector("canvas");
+	//definimos el pincel
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle = "lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	pincel.fillStyle = "green";
+	pincel.fillRect(0,0,200,400);
+
+	pincel.fillStyle = "red";
+	pincel.fillRect(400,0,200,400);
+
+	pincel.fillStyle = "yellow";
+	pincel.beginPath(); // Funcion para iniciar un camino
+	pincel.moveTo(300,200); //Funcion para mover nuestro pincel al centro de la bandera
+	pincel.lineTo(200,400); //Funcio que va dibujar una linea a las cordenadas
+	pincel.lineTo(400,400);
+	pincel.fill();//Funcion para rellenar el grafico que hicimos
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath(); 
+	pincel.arc(300,200,50,0,2*3.14);//Funcion para graficar circunferencias
+	//parametros (x,y,radio,angulo Inicial, angulo Final) 
+	pincel.fill();
+</script>
+</div>

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+	//Funcion para hacer saltos de lineas
+	function saltarLinea(){
+		document.write("<br><br>")
+	};
+	//Funcion para imprimir frases
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	}
+	var numero = parseInt(prompt("Ingrese el numero tope"));
+
+	function loteria(numero){
+		numeroRandom = Math.round( Math.random() * numero );
+		return numeroRandom;
+	}
+
+	var numeroPensado= loteria(numero)
+	var intentos = 3
+	var contador = 1;
+
+	while (contador <= intentos){
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-"+numero));
+		if ( numeroPensado== numeroLanzado) {
+			alert("Usted Acertó, en el intento");
+			break;
+		}else{
+			if (numeroLanzado > numeroPensado) {
+				imprimir("Usted erró, el numero pensado ("+ numeroPensado + ") era menor que tu numero ("+ numeroLanzado +")");
+			}else{
+				imprimir("Usted erró, el numero pensado ("+ numeroPensado + ") era mayor que tu numero ("+ numeroLanzado +")");
+			}	
+		};
+		contador++;
+	};
+</script>
